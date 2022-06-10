@@ -1,15 +1,15 @@
 def call (String StageName) {
     if( "${StageName}" == "mvn-Build") 
     {
-        sh "mvm clean package"
+        sh "mvn clean package"
     }
     else if ( "${StageName}" == "mvn-Quality") 
     {
-        sh "mvm clean sonar:sonar"
+        sh "mvn clean sonar:sonar"
     }
     else if ( "${StageName}" == "mvn-Artifacts") 
     {
-        sh "mvm clean deploy"
+        sh "mvn clean deploy"
     } 
 }
 
